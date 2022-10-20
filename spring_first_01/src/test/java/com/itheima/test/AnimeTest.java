@@ -17,7 +17,7 @@ public class AnimeTest {
     @Test
     public void testSpringBean01(){
 
-        ClassPathXmlApplicationContext cp = new ClassPathXmlApplicationContext("SpringConfig.xml");
+        ClassPathXmlApplicationContext cp = new ClassPathXmlApplicationContext("classpath:SpringConfig.xml");
 
         AnimeInfo bean = cp.getBean(AnimeInfo.class);
 

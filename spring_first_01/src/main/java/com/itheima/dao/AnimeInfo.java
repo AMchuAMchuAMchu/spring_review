@@ -24,7 +24,4 @@ public class AnimeInfo {
         System.out.println("阔你吃哇~~当前时间是:>>"+ dateTimeUtils.getCurrentTime());
     }
 
-
-
-
 }

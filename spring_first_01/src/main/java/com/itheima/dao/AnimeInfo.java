@@ -1,5 +1,7 @@
 package com.itheima.dao;
 
+import com.itheima.utils.DateTimeUtils;
+
 /**
  * Description ==> TODO
  * BelongsProject ==> spring_review
@@ -10,12 +12,15 @@ package com.itheima.dao;
  */
 public class AnimeInfo {
 
+    private DateTimeUtils dateTimeUtils;
+
     public void sayHello(){
 
         System.out.println("sayHello...");
         System.out.println("sayKNCW...");
         System.out.println("say(｡･∀･)ﾉﾞ嗨...");
-
+        System.out.println("阔你吃哇~~当前时间是:>>"+ dateTimeUtils.getCurrentTime());
+        System.out.println("阔你吃哇~~当前时间是:>>"+ dateTimeUtils.getCurrentTime());
     }
 
 

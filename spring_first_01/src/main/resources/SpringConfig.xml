@@ -5,4 +5,6 @@
 
     <bean id="animeInfo" class="com.itheima.dao.AnimeInfo"/>
 
+    <bean id="dateTimeUtils" class="com.itheima.utils.DateTimeUtils"/>
+
 </beans>

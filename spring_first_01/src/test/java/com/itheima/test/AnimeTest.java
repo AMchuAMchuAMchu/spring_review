@@ -2,6 +2,8 @@ package com.itheima.test;
 
 import com.itheima.dao.AnimeInfo;
 import com.itheima.dao.FactoryBeanTest;
+import com.itheima.utils.DateTimeUtils;
+import com.sun.xml.internal.messaging.saaj.packaging.mime.util.BEncoderStream;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -22,9 +24,11 @@ public class AnimeTest {
 
         FactoryBeanTest bean = cp.getBean(FactoryBeanTest.class);
 
-        AnimeInfo object = bean.getObject();
+        DateTimeUtils object = bean.getObject();
 
-        object.sayHello();
+        String currentTime = object.getCurrentTime();
+
+        System.out.println(">>>"+currentTime);
 
     }
 

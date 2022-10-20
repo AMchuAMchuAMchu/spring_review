@@ -11,4 +11,5 @@
 
     <bean id="factoryBeanTest2" class="com.itheima.dao.FactoryBeanTest"/>
 
+
 </beans>

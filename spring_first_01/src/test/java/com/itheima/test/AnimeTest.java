@@ -1,6 +1,7 @@
 package com.itheima.test;
 
 import com.itheima.dao.AnimeInfo;
+import com.itheima.dao.FactoryBeanTest;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -13,6 +14,19 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
 public class AnimeTest {
+
+    @Test
+    public void testFactoryBean01() throws Exception {
+
+        ClassPathXmlApplicationContext cp = new ClassPathXmlApplicationContext("SpringConfig.xml");
+
+        FactoryBeanTest bean = cp.getBean(FactoryBeanTest.class);
+
+        AnimeInfo object = bean.getObject();
+
+        object.sayHello();
+
+    }
 
     @Test
     public void testSpringBean01(){

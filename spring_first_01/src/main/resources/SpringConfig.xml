@@ -9,4 +9,6 @@
 
     <bean id="dateTimeUtils" class="com.itheima.utils.DateTimeUtils"/>
 
+    <bean id="factoryBeanTest2" class="com.itheima.dao.FactoryBeanTest"/>
+
 </beans>

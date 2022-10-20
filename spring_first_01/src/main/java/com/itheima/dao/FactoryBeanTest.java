@@ -17,6 +17,9 @@ public class FactoryBeanTest implements FactoryBean<DateTimeUtils> {
 
     @Override
     public DateTimeUtils getObject() throws Exception {
+        System.out.println("FactoryBeanTest...11");
+        System.out.println("FactoryBeanTest...22");
+        System.out.println("FactoryBeanTest...33");
         return new DateTimeUtils();
     }
 

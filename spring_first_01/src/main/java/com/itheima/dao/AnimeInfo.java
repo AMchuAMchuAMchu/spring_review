@@ -12,7 +12,7 @@ import com.itheima.utils.DateTimeUtils;
  */
 public class AnimeInfo {
 
-    private DateTimeUtils dateTimeUtils;
+    private DateTimeUtils dateTimeUtils = null;
 
     public void sayHello(){
 

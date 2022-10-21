@@ -1,7 +1,11 @@
 import com.alibaba.fastjson2.JSON;
 import com.itheima.pojo.AnimeInfo;
+import com.itheima.utils.DateTimeTest01;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.time.format.DateTimeFormatter;
 
 /**
  * Description ==> TODO
@@ -19,6 +23,12 @@ public class AnimeInfoTest01 {
         ClassPathXmlApplicationContext cp = new ClassPathXmlApplicationContext("SpringConfig.xml");
 
         AnimeInfo bean = cp.getBean(AnimeInfo.class);
+
+        DateTimeTest01 dateTimeTest01 = bean.getDateTimeTest01();
+
+        String dtn = dateTimeTest01.getDTN();
+
+        System.out.println("dtn>>>"+dtn);
 
         Object o = JSON.toJSON(bean);
 

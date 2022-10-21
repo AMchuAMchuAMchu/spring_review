@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>spring_first_01</module>
+        <module>spring_first_02</module>
     </modules>
 
     <properties>

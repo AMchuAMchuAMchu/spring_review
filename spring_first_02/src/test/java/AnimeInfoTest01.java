@@ -17,6 +17,8 @@ import java.time.format.DateTimeFormatter;
  */
 public class AnimeInfoTest01 {
 
+
+
     @Test
     public void testDI01(){
 
@@ -24,15 +26,17 @@ public class AnimeInfoTest01 {
 
         AnimeInfo bean = cp.getBean(AnimeInfo.class);
 
-        DateTimeTest01 dateTimeTest01 = bean.getDateTimeTest01();
+//        DateTimeTest01 dateTimeTest01 = bean.getDateTimeTest01();
+//
+//        String dtn = dateTimeTest01.getDTN();
+//
+//        System.out.println("dtn>>>"+dtn);
+//
+//        Object o = JSON.toJSON(bean);
 
-        String dtn = dateTimeTest01.getDTN();
+//        System.out.println(o);
 
-        System.out.println("dtn>>>"+dtn);
-
-        Object o = JSON.toJSON(bean);
-
-        System.out.println(o);
+        System.out.println(bean);
 
 
     }

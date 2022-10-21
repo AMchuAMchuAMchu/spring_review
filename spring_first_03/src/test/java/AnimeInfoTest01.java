@@ -17,7 +17,7 @@ import java.sql.SQLException;
 public class AnimeInfoTest01 {
 
     @Test
-    public void testDI02){
+    public void testDI02(){
 
         ClassPathXmlApplicationContext cp = new ClassPathXmlApplicationContext("SpringConfig.xml");
 

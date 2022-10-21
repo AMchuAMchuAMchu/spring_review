@@ -28,4 +28,13 @@ public class AnimeInfo {
 
     public AnimeInfo() {
     }
+
+    @Override
+    public String toString() {
+        return "AnimeInfo{" +
+                "dateTimeTest01=" + dateTimeTest01 +
+                ", name='" + name + '\'' +
+                ", releaseTime=" + releaseTime +
+                '}';
+    }
 }

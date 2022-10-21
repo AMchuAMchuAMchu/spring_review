@@ -36,7 +36,7 @@ public class AnimeInfoTest01 {
 
 //        System.out.println(o);
 
-        System.out.println(bean);
+        System.out.println(bean.toString());
 
 
     }

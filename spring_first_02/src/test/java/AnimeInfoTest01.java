@@ -1,5 +1,6 @@
 import com.alibaba.fastjson2.JSON;
 import com.itheima.pojo.AnimeInfo;
+import com.itheima.utils.ContainerTest01;
 import com.itheima.utils.DateTimeTest01;
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.junit.Test;
@@ -17,6 +18,18 @@ import java.time.format.DateTimeFormatter;
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
 public class AnimeInfoTest01 {
+
+
+    @Test
+    public void testContainerTest01(){
+
+        ClassPathXmlApplicationContext cp = new ClassPathXmlApplicationContext("SpringConfig.xml");
+
+        ContainerTest01 bean = cp.getBean(ContainerTest01.class);
+
+        bean.printAnime();
+
+    }
 
 
     @Test

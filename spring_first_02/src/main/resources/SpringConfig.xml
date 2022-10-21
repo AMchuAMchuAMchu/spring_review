@@ -3,20 +3,54 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!--    <bean id="animeInfo" class="com.itheima.pojo.AnimeInfo">-->
-<!--        <property name="dateTimeTest01" ref="dateTimeTest012"/>-->
-<!--        <property name="name" value="Lycoris recoil"/>-->
-<!--        <property name="releaseTime" value="2022"/>-->
-<!--    </bean>-->
+    <!--    <bean id="animeInfo" class="com.itheima.pojo.AnimeInfo">-->
+    <!--        <property name="dateTimeTest01" ref="dateTimeTest012"/>-->
+    <!--        <property name="name" value="Lycoris recoil"/>-->
+    <!--        <property name="releaseTime" value="2022"/>-->
+    <!--    </bean>-->
 
 
-<!--    <bean id="animeInfo" class="com.itheima.pojo.AnimeInfo">-->
-<!--        <constructor-arg name="dateTimeTest01" ref="dateTimeTest012"/>-->
-<!--        <constructor-arg name="name"  value="Lycoris recoil"/>-->
-<!--        <constructor-arg name="releaseTime" value="2022"/>-->
-<!--    </bean>-->
+    <!--    <bean id="animeInfo" class="com.itheima.pojo.AnimeInfo">-->
+    <!--        <constructor-arg name="dateTimeTest01" ref="dateTimeTest012"/>-->
+    <!--        <constructor-arg name="name"  value="Lycoris recoil"/>-->
+    <!--        <constructor-arg name="releaseTime" value="2022"/>-->
+    <!--    </bean>-->
 
     <bean id="dateTimeTest012" class="com.itheima.utils.DateTimeTest01"/>
 
+
     <bean id="animeInfo" class="com.itheima.pojo.AnimeInfo" autowire="byType"/>
+
+    <bean id="containerTest01" class="com.itheima.utils.ContainerTest01">
+        <property name="name01">
+            <array>
+                <value>kirito</value>
+                <value>asuna</value>
+            </array>
+        </property>
+        <property name="name02">
+            <list>
+                <value>Alici</value>
+                <value>Eugeo</value>
+            </list>
+        </property>
+        <property name="name03">
+            <set>
+                <value>松冈祯丞</value>
+                <value>户松遥</value>
+            </set>
+        </property>
+        <property name="name04">
+            <map>
+                <entry key="k1" value="岛崎信长"/>
+                <entry key="k2" value="茅野爱衣"/>
+            </map>
+        </property>
+        <property name="name05">
+            <props>
+                <prop key="k1">爱丽丝</prop>
+                <prop key="k2">尤吉欧</prop>
+            </props>
+        </property>
+    </bean>
 </beans>

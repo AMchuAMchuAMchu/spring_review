@@ -19,6 +19,10 @@
         <property name="password" value="${jdbc.password}"/>
     </bean>
 
+    <bean id="animeInfo" class="com.itheima.pojo.AnimeInfo">
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+    </bean>
+
 <!--    <bean id="druidDataSource" class="com.alibaba.druid.pool.DruidDataSource">-->
 <!--        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>-->
 <!--        <property name="url" value="jdbc:mysql://localhost:3306/anime_test01"/>-->

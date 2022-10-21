@@ -1,5 +1,6 @@
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidPooledConnection;
+import com.itheima.pojo.AnimeInfo;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,6 +15,19 @@ import java.sql.SQLException;
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
 public class AnimeInfoTest01 {
+
+    @Test
+    public void testDI02){
+
+        ClassPathXmlApplicationContext cp = new ClassPathXmlApplicationContext("SpringConfig.xml");
+
+        AnimeInfo bean = cp.getBean(AnimeInfo.class);
+
+        String driverClassName = bean.getDriverClassName();
+
+        System.out.println(driverClassName);
+
+    }
 
     @Test
     public void testDruid() throws SQLException {

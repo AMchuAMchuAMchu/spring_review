@@ -11,6 +11,7 @@
     <modules>
         <module>spring_first_01</module>
         <module>spring_first_02</module>
+        <module>spring_first_03</module>
     </modules>
 
     <properties>

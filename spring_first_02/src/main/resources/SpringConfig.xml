@@ -10,11 +10,13 @@
 <!--    </bean>-->
 
 
-    <bean id="animeInfo" class="com.itheima.pojo.AnimeInfo">
-        <constructor-arg name="dateTimeTest01" ref="dateTimeTest012"/>
-        <constructor-arg name="name" value="Lycoris recoil"/>
-        <constructor-arg name="releaseTime" value="2022"/>
-    </bean>
+<!--    <bean id="animeInfo" class="com.itheima.pojo.AnimeInfo">-->
+<!--        <constructor-arg name="dateTimeTest01" ref="dateTimeTest012"/>-->
+<!--        <constructor-arg name="name"  value="Lycoris recoil"/>-->
+<!--        <constructor-arg name="releaseTime" value="2022"/>-->
+<!--    </bean>-->
 
     <bean id="dateTimeTest012" class="com.itheima.utils.DateTimeTest01"/>
+
+    <bean id="animeInfo" class="com.itheima.pojo.AnimeInfo" autowire="byType"/>
 </beans>

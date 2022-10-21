@@ -11,7 +11,7 @@ import lombok.Data;
  * CreateTime ==> 2022-10-21 17:43:21
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
-//@Data
+@Data
 public class AnimeInfo {
 
     private DateTimeTest01 dateTimeTest01;
@@ -19,6 +19,11 @@ public class AnimeInfo {
     private String name;
 
     private Integer releaseTime;
+
+    public void test(){
+        String dtn = dateTimeTest01.getDTN();
+        System.out.println(">>>"+dtn);
+    }
 
     public AnimeInfo(DateTimeTest01 dateTimeTest01, String name, Integer releaseTime) {
         this.dateTimeTest01 = dateTimeTest01;
@@ -29,12 +34,12 @@ public class AnimeInfo {
     public AnimeInfo() {
     }
 
-    @Override
-    public String toString() {
-        return "AnimeInfo{" +
-                "dateTimeTest01=" + dateTimeTest01 +
-                ", name='" + name + '\'' +
-                ", releaseTime=" + releaseTime +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "AnimeInfo{" +
+//                "dateTimeTest01=" + dateTimeTest01 +
+//                ", name='" + name + '\'' +
+//                ", releaseTime=" + releaseTime +
+//                '}';
+//    }
 }

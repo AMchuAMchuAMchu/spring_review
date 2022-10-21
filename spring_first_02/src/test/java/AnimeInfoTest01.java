@@ -5,6 +5,7 @@ import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import javax.crypto.ExemptionMechanismException;
 import java.time.format.DateTimeFormatter;
 
 /**
@@ -16,6 +17,18 @@ import java.time.format.DateTimeFormatter;
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
 public class AnimeInfoTest01 {
+
+
+    @Test
+    public void testAutowired01(){
+
+        ClassPathXmlApplicationContext cp = new ClassPathXmlApplicationContext("SpringConfig.xml");
+
+        AnimeInfo bean = cp.getBean(AnimeInfo.class);
+
+        bean.test();
+
+    }
 
 
 

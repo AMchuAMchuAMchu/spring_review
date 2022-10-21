@@ -20,7 +20,6 @@ public class AnimeInfoTest01 {
 
         ClassPathXmlApplicationContext cp = new ClassPathXmlApplicationContext("SpringConfig.xml");
 
-
         DruidDataSource bean = cp.getBean(DruidDataSource.class);
 
         DruidPooledConnection connection = bean.getConnection();

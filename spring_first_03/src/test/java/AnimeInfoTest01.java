@@ -23,6 +23,7 @@ public class AnimeInfoTest01 {
         DruidDataSource bean = cp.getBean(DruidDataSource.class);
 
         DruidPooledConnection connection = bean.getConnection();
+
         System.out.println(connection);
 
     }

@@ -32,11 +32,10 @@ public class AnimeInfoTest01 {
 //
 //        System.out.println("dtn>>>"+dtn);
 //
-//        Object o = JSON.toJSON(bean);
+        Object o = JSON.toJSON(bean);
 
-//        System.out.println(o);
+        System.out.println(o);
 
-        System.out.println(bean.toString());
 
 
     }

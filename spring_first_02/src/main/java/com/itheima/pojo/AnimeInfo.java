@@ -26,6 +26,6 @@ public class AnimeInfo {
         this.releaseTime = releaseTime;
     }
 
-//    public AnimeInfo() {
-//    }
+    public AnimeInfo() {
+    }
 }

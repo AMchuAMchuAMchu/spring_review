@@ -3,7 +3,6 @@ package com.itheima.test;
 import com.itheima.dao.AnimeInfo;
 import com.itheima.dao.FactoryBeanTest;
 import com.itheima.utils.DateTimeUtils;
-import com.sun.xml.internal.messaging.saaj.packaging.mime.util.BEncoderStream;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -16,6 +15,16 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
 public class AnimeTest {
+
+
+    @Test
+    public void testInitDestroy(){
+
+        ClassPathXmlApplicationContext cp = new ClassPathXmlApplicationContext("SpringConfig.xml");
+
+        cp.registerShutdownHook();
+
+    }
 
     @Test
     public void testFactoryBean01() throws Exception {

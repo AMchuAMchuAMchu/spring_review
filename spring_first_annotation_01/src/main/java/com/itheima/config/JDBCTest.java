@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
 @PropertySource("classpath:jdbc.properties")
 public class JDBCTest {
 
-    @Value("${jdbc.DriverClassName}")
+    @Value("${jdbc.driverClassName}")
     private String driverClassName;
 
 }

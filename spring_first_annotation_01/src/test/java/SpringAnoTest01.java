@@ -1,3 +1,4 @@
+import com.itheima.config.JDBCTest;
 import com.itheima.config.SpringConfig;
 import com.itheima.service.AnimeInfoService;
 import org.junit.Test;
@@ -18,9 +19,13 @@ public class SpringAnoTest01 {
 
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
 
-        AnimeInfoService bean = ac.getBean(AnimeInfoService.class);
+//        AnimeInfoService bean = ac.getBean(AnimeInfoService.class);
+//
+//        bean.sayHelloService();
+        JDBCTest bean = ac.getBean(JDBCTest.class);
 
-        bean.sayHelloService();
+        System.out.println(">>>>>>"+bean.getDriverClassName());
+        System.out.println(">>>>>>"+bean.getDriverClassName());
 
     }
 

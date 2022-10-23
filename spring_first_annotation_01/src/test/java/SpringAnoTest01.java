@@ -1,3 +1,5 @@
+import com.alibaba.druid.pool.DruidDataSource;
+import com.itheima.config.DruidDataSourceTest;
 import com.itheima.config.JDBCTest;
 import com.itheima.config.SpringConfig;
 import com.itheima.service.AnimeInfoService;
@@ -32,9 +34,11 @@ public class SpringAnoTest01 {
 //        System.out.println(">>>>>>"+bean.getDriverClassName());
 //        System.out.println(">>>>>>"+bean.getDriverClassName());
 
-        DataSource bean = ac.getBean(DataSource.class);
+        DruidDataSourceTest bean = ac.getBean(DruidDataSourceTest.class);
 
-        Connection connection = bean.getConnection();
+        DataSource druidDataSourceTest = bean.getDruidDataSourceTest();
+
+        Connection connection = druidDataSourceTest.getConnection();
 
         System.out.println(">>>??/"+connection);
         System.out.println(">>>??/"+connection);

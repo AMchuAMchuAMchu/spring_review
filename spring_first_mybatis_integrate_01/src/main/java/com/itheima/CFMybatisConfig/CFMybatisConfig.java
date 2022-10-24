@@ -18,6 +18,6 @@ import org.springframework.transaction.annotation.Transactional;
 @ComponentScan("com.itheima")
 @PropertySource("classpath:jdbc.properties")
 @Transactional
-@Import(CFDruidDataSource.class)
+@Import({CFDruidDataSource.class,CFMybatisSqlMapper.class})
 public class CFMybatisConfig {
 }

@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import javax.crypto.ExemptionMechanismException;
 import java.util.List;
 
 /**
@@ -25,9 +26,22 @@ public class AnimeInfoTest01 {
 
         AnimeInfoDao bean = ac.getBean(AnimeInfoDao.class);
 
-        List<AnimeInfo> animeInfos = bean.selectAll();
+//        List<AnimeInfo> animeInfos = bean.selectAll();
 
-        animeInfos.forEach(System.out::println);
+//        animeInfos.forEach(System.out::println);
+
+        AnimeInfo animeInfo = new AnimeInfo();
+
+        animeInfo.setName("在地下城寻求邂逅是否搞错了什么");
+        animeInfo.setId(35);
+        animeInfo.setCharacter01("贝尔克朗尼");
+        animeInfo.setCharacter02("艾斯·华伦斯坦");
+        animeInfo.setRelease_time(2015);
+        Integer integer = bean.insertOne(animeInfo);
+
+        System.out.println(integer);
+        System.out.println(integer);
+        System.out.println(integer);
 
     }
 

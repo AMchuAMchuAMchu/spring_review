@@ -13,6 +13,7 @@
         <module>spring_first_02</module>
         <module>spring_first_03</module>
         <module>spring_first_annotation_01</module>
+        <module>spring_first_mybatis_integrate_01</module>
     </modules>
 
     <properties>

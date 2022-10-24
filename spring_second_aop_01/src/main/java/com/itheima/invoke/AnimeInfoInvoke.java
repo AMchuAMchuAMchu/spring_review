@@ -1,5 +1,7 @@
 package com.itheima.invoke;
 
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -20,11 +22,20 @@ public class AnimeInfoInvoke {
     @Pointcut("execution(* com.itheima.*.AnimeInfoService.printCurrentTime(..))")
     public void pt01(){}
 
-    @Before("pt01()")
-    public void invokeAnimeInfo(){
+    @Around("pt01()")
+    public void invokeAnimeInfo(ProceedingJoinPoint pjp){
         System.out.println("操蛋...");
         System.out.println("操蛋...");
         System.out.println("操蛋...");
+        try {
+            pjp.proceed();
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("西内");
+        System.out.println("西内");
+        System.out.println("西内");
     }
 
 

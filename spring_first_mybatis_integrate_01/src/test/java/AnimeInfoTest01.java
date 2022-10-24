@@ -6,6 +6,8 @@ import org.junit.runner.RunWith;
 import org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.crypto.ExemptionMechanismException;
 import java.util.List;
@@ -18,6 +20,8 @@ import java.util.List;
  * CreateTime ==> 2022-10-24 10:20:42
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes={CFMybatisConfig.class})
 public class AnimeInfoTest01 {
 
 

@@ -4,6 +4,7 @@ import com.itheima.pojo.AnimeInfo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import javax.crypto.ExemptionMechanismException;
@@ -18,6 +19,21 @@ import java.util.List;
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
 public class AnimeInfoTest01 {
+
+
+    @Autowired
+    private AnimeInfoDao animeInfoDao;
+
+    @Test
+    public void testSelectAll02(){
+
+        List<AnimeInfo> animeInfos = animeInfoDao.selectAll();
+
+
+        animeInfos.forEach(System.out::println);
+
+    }
+
 
     @Test
     public void testSelectAll(){

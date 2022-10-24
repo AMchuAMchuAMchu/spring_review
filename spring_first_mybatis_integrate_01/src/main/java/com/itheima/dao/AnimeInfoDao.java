@@ -19,7 +19,7 @@ public interface AnimeInfoDao {
     @Select("select * from anime_info")
     List<AnimeInfo> selectAll();
 
-    @Insert("insert into anime_info values(#{name},#{character01},#{character02},#{release_time},#{id})")
+    @Insert("insert into anime_info values(#{name},#{release_time},#{character01},#{character02},#{id})")
     Integer insertOne(AnimeInfo animeInfo);
 
 

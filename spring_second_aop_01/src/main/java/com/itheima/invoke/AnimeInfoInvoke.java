@@ -6,6 +6,8 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
+import javax.swing.*;
+
 /**
  * Description ==> TODO
  * BelongsProject ==> spring_review
@@ -24,17 +26,16 @@ public class AnimeInfoInvoke {
 
     @Around("pt01()")
     public Object invokeAnimeInfo(ProceedingJoinPoint pjp){
-        Object[] args = null;
+        Object proceed = null;
         System.out.println("操蛋...");
         System.out.println("操蛋...");
         System.out.println("操蛋...");
         try {
-            pjp.proceed();
-            args = pjp.getArgs();
+
+            Object[] args = pjp.getArgs();
             args[0] = "散华礼弥";
             args[1] = 2012;
-
-
+            proceed = pjp.proceed(args);
 
         } catch (Throwable e) {
             e.printStackTrace();
@@ -43,8 +44,7 @@ public class AnimeInfoInvoke {
         System.out.println("西内");
         System.out.println("西内");
 
-        return args;
-
+        return proceed;
 
     }
 }

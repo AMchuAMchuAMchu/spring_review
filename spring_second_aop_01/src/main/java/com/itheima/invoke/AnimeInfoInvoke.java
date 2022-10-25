@@ -18,22 +18,33 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class AnimeInfoInvoke {
 
+
     @Pointcut("execution(* com.itheima.*.AnimeInfoService.printCurrentTime(..))")
     public void pt01(){}
 
     @Around("pt01()")
-    public void invokeAnimeInfo(ProceedingJoinPoint pjp){
+    public Object invokeAnimeInfo(ProceedingJoinPoint pjp){
+        Object[] args = null;
         System.out.println("操蛋...");
         System.out.println("操蛋...");
         System.out.println("操蛋...");
         try {
             pjp.proceed();
+            args = pjp.getArgs();
+            args[0] = "散华礼弥";
+            args[1] = 2012;
+
+
+
         } catch (Throwable e) {
             e.printStackTrace();
         }
+        System.out.println("西内");
+        System.out.println("西内");
+        System.out.println("西内");
 
-        System.out.println("西内");
-        System.out.println("西内");
-        System.out.println("西内");
+        return args;
+
+
     }
 }

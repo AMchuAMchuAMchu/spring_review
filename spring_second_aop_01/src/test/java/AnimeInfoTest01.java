@@ -21,7 +21,7 @@ public class AnimeInfoTest01 {
 
         AnimeInfoService bean = ac.getBean(AnimeInfoService.class);
 
-        bean.printCurrentTime();
+        bean.printCurrentTime(null,null);
 
     }
 

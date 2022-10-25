@@ -1,9 +1,8 @@
 package com.itheima.invoke;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
@@ -23,6 +22,16 @@ public class AnimeInfoInvoke {
 
     @Pointcut("execution(* com.itheima.*.AnimeInfoService.printCurrentTime(..))")
     public void pt01(){}
+
+//    @Before("pt01()")
+//    public Object test(JoinPoint jp){
+//        Object[] args = jp.getArgs();
+//        args[0] = "SAO";
+//        args[1] = 2012;
+//        Object target = jp.getTarget();
+//        return "target";
+//    }
+
 
     @Around("pt01()")
     public Object invokeAnimeInfo(ProceedingJoinPoint pjp){

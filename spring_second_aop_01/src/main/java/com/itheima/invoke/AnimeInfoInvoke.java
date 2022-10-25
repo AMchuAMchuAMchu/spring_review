@@ -23,33 +23,33 @@ public class AnimeInfoInvoke {
     @Pointcut("execution(* com.itheima.*.AnimeInfoService.printCurrentTime(..))")
     public void pt01(){}
 
-    @AfterReturning(value = "pt01()",returning = "ret")
-    public void test(Object ret){
-        System.out.println(">>>"+ret);
-    }
-
-//
-//    @Around("pt01()")
-//    public Object invokeAnimeInfo(ProceedingJoinPoint pjp){
-//        Object proceed = null;
-//        System.out.println("操蛋...");
-//        System.out.println("操蛋...");
-//        System.out.println("操蛋...");
-//        try {
-//
-//            Object[] args = pjp.getArgs();
-//            args[0] = "散华礼弥";
-//            args[1] = 2012;
-//            proceed = pjp.proceed(args);
-//
-//        } catch (Throwable e) {
-//            e.printStackTrace();
-//        }
-//        System.out.println("西内");
-//        System.out.println("西内");
-//        System.out.println("西内");
-//
-//        return proceed;
-//
+//    @AfterReturning(value = "pt01()",returning = "ret")
+//    public void test(Object ret){
+//        System.out.println(">>>"+ret);
 //    }
+
+
+    @Around("pt01()")
+    public Object invokeAnimeInfo(ProceedingJoinPoint pjp){
+        Object proceed = null;
+        System.out.println("操蛋...");
+        System.out.println("操蛋...");
+        System.out.println("操蛋...");
+        try {
+
+            Object[] args = pjp.getArgs();
+            args[0] = "散华礼弥";
+            args[1] = 2012;
+            proceed = pjp.proceed(args);
+
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+        System.out.println("西内");
+        System.out.println("西内");
+        System.out.println("西内");
+
+        return proceed;
+
+    }
 }

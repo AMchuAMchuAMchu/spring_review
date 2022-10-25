@@ -16,13 +16,14 @@ import java.time.format.DateTimeFormatter;
 @Service
 public class AnimeInfoService {
 
-    public void printCurrentTime(String name,Integer time){
+    public String printCurrentTime(String name,Integer time){
 
         String format = DateTimeFormatter.ofPattern("yyyy年MM月dd日 hh时mm分ss秒").format(LocalDateTime.now());
 
         System.out.println("show time >> "+format);
 
         System.out.println("你敢传参数进来吗?name::"+name+"|| time::"+time);
+        return "你敢传参数进来吗";
 
     }
 

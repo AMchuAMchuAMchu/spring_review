@@ -1,5 +1,6 @@
 package com.itheima.dao;
 
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
@@ -18,6 +19,9 @@ public interface AccountDao {
 
     @Update("update account set money = money - #{money} where id = 2")
     void subKirito(Integer money);
+
+    @Insert("insert into log_account values(#{name01},#{name02},#{money},#{time})")
+    void logAccount(String name01,String name02,Integer money,String time);
 
 
 }

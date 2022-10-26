@@ -33,7 +33,7 @@ public class AccountServiceImpl implements AccountService {
 
         accountDao.addAlice(money);
 
-//        int i = 10/0;
+        int i = 10/0;
 //        if (true){
 //            throw new IOException();
 //        }

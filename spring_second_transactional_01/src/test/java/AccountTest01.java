@@ -26,7 +26,7 @@ public class AccountTest01 {
     @Test
     public void testT01() throws IOException {
 
-        accountService.Kirito2Alice(500);
+        accountService.Kirito2Alice(100);
 
 
     }

@@ -32,8 +32,8 @@ public class AccountTest01 {
     @Test
     public void testT01() throws IOException {
         int money = 100;
-        accountService.Kirito2Alice(money);
         logForAccount.logAccount("kirito","alice",money, DateTimeFormatter.ofPattern("yyyy年MM月dd日 hh时mm分ss秒").format(LocalDateTime.now()));
+        accountService.Kirito2Alice(money);
 
 
     }

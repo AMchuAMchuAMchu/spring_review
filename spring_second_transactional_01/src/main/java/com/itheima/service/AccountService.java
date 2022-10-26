@@ -1,6 +1,7 @@
 package com.itheima.service;
 
 import org.springframework.test.annotation.Rollback;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
@@ -18,6 +19,9 @@ import java.io.IOException;
 public interface AccountService {
 
     void Kirito2Alice(Integer money) throws IOException;
+
+//    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    void log(Integer money);
 
 
 }

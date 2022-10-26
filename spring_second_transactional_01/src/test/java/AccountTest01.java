@@ -26,16 +26,11 @@ public class AccountTest01 {
     @Autowired
     private AccountService accountService;
 
-    @Autowired
-    private LogForAccount logForAccount;
-
     @Test
     public void testT01() throws IOException {
         int money = 100;
-        logForAccount.logAccount("kirito","alice",money, DateTimeFormatter.ofPattern("yyyy年MM月dd日 hh时mm分ss秒").format(LocalDateTime.now()));
+        accountService.log(money);
         accountService.Kirito2Alice(money);
-
-
     }
 
 

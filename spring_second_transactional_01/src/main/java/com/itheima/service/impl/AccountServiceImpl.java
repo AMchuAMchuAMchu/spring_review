@@ -27,6 +27,9 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     private LogForAccount logForAccount;
 
+
+
+
     @Override
     public void Kirito2Alice(Integer money) throws IOException {
 
@@ -40,5 +43,10 @@ public class AccountServiceImpl implements AccountService {
 
         accountDao.subKirito(money);
 
+    }
+
+    @Override
+    public void log(Integer money) {
+        logForAccount.logAccount("kirito","alice",money, DateTimeFormatter.ofPattern("yyyy年MM月dd日 hh时mm分ss秒").format(LocalDateTime.now()));
     }
 }

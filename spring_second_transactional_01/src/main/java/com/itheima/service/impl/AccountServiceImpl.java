@@ -30,11 +30,10 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public void Kirito2Alice(Integer money) throws IOException {
 
-        logForAccount.logAccount("kirito","alice",money, DateTimeFormatter.ofPattern("yyyy年MM月dd日 hh时mm分ss秒").format(LocalDateTime.now()));
 
         accountDao.addAlice(money);
 
-        int i = 10/0;
+//        int i = 10/0;
 //        if (true){
 //            throw new IOException();
 //        }

@@ -1,4 +1,5 @@
 import com.itheima.config.CFSpringConfig;
+import com.itheima.log.LogForAccount;
 import com.itheima.service.AccountService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,6 +8,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Description ==> TODO
@@ -23,10 +26,14 @@ public class AccountTest01 {
     @Autowired
     private AccountService accountService;
 
+    @Autowired
+    private LogForAccount logForAccount;
+
     @Test
     public void testT01() throws IOException {
-
-        accountService.Kirito2Alice(100);
+        int money = 100;
+        accountService.Kirito2Alice(money);
+        logForAccount.logAccount("kirito","alice",money, DateTimeFormatter.ofPattern("yyyy年MM月dd日 hh时mm分ss秒").format(LocalDateTime.now()));
 
 
     }

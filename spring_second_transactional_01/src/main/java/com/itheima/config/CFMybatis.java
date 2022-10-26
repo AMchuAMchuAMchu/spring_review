@@ -31,8 +31,6 @@ public class CFMybatis {
 
         msc.setBasePackage("com.itheima.dao");
 
-
-
         return msc;
     }
 

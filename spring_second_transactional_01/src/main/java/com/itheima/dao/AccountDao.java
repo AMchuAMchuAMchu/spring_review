@@ -1,6 +1,7 @@
 package com.itheima.dao;
 
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Component;
@@ -23,7 +24,7 @@ public interface AccountDao {
     void subKirito(Integer money);
 
     @Insert("insert into log_account values(#{name01},#{name02},#{money},#{time})")
-    void logAccount(String name01,String name02,Integer money,String time);
+    void logAccount(@Param("name01") String name01,@Param("name02") String name02,@Param("money") Integer money,@Param("time") String time);
 
 
 }

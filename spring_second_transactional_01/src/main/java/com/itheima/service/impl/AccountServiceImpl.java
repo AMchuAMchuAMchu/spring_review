@@ -25,7 +25,7 @@ public class AccountServiceImpl implements AccountService {
 
         accountDao.addAlice(money);
 
-//        int i = 10/0;
+        int i = 10/0;
 
         accountDao.subKirito(money);
 

@@ -24,7 +24,7 @@ public class AccountTest01 {
     @Test
     public void testT01(){
 
-        accountService.Kirito2Alice(100);
+        accountService.Kirito2Alice(500);
 
 
     }

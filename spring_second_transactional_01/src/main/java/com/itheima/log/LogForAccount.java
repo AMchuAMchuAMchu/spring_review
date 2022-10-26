@@ -3,6 +3,7 @@ package com.itheima.log;
 import com.itheima.dao.AccountDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -14,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
 @Component
-@Transactional()
+@Transactional(propagation = Propagation.REQUIRED)
 public class LogForAccount {
 
     @Autowired

@@ -27,9 +27,6 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     private LogForAccount logForAccount;
 
-
-
-
     @Override
     public void Kirito2Alice(Integer money) throws IOException {
 

@@ -16,6 +16,7 @@
         <module>spring_first_mybatis_integrate_01</module>
         <module>spring_second_aop_01</module>
         <module>spring_second_transactional_01</module>
+        <module>spring_second_mvc_01</module>
     </modules>
 
     <properties>

@@ -18,6 +18,7 @@ import java.io.IOException;
 @Transactional
 public interface AccountService {
 
+
     void Kirito2Alice(Integer money) throws IOException;
 
 //    @Transactional(propagation = Propagation.REQUIRES_NEW)

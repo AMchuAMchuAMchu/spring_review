@@ -15,6 +15,7 @@
         <module>spring_first_annotation_01</module>
         <module>spring_first_mybatis_integrate_01</module>
         <module>spring_second_aop_01</module>
+        <module>spring_second_transactional_01</module>
     </modules>
 
     <properties>

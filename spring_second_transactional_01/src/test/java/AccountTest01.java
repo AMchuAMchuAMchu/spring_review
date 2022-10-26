@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.io.IOException;
+
 /**
  * Description ==> TODO
  * BelongsProject ==> spring_review
@@ -22,7 +24,7 @@ public class AccountTest01 {
     private AccountService accountService;
 
     @Test
-    public void testT01(){
+    public void testT01() throws IOException {
 
         accountService.Kirito2Alice(500);
 

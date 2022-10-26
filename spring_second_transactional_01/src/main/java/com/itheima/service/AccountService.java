@@ -2,6 +2,8 @@ package com.itheima.service;
 
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.IOException;
+
 /**
  * Description ==> TODO
  * BelongsProject ==> spring_review
@@ -13,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public interface AccountService {
 
-    void Kirito2Alice(Integer money);
+    void Kirito2Alice(Integer money) throws IOException;
 
 
 }

@@ -5,6 +5,8 @@ import com.itheima.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+
 /**
  * Description ==> TODO
  * BelongsProject ==> spring_review
@@ -21,11 +23,14 @@ public class AccountServiceImpl implements AccountService {
 
 
     @Override
-    public void Kirito2Alice(Integer money) {
+    public void Kirito2Alice(Integer money) throws IOException {
 
         accountDao.addAlice(money);
 
 //        int i = 10/0;
+        if (true){
+            throw new IOException();
+        }
 
         accountDao.subKirito(money);
 

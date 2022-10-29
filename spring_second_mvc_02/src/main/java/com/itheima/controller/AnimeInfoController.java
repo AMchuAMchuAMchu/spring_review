@@ -5,8 +5,10 @@ import com.fasterxml.jackson.annotation.JsonAlias;
 import com.itheima.pojo.AnimeInfo;
 import org.springframework.web.bind.annotation.*;
 
+import java.nio.file.AccessMode;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -69,7 +71,7 @@ public class AnimeInfoController {
 
     @GetMapping("/parameter06")
     public String[] getArray01(String [] animes){
-        System.out.println("animes >> "+animes);
+        System.out.println("animes >> "+ Arrays.toString(animes));
         return new String []{"kirito","asuna","Alici","eugeo"};
     }
 

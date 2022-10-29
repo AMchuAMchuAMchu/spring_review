@@ -42,8 +42,8 @@ public class AnimeInfoController {
     }
 
     @GetMapping("/parameter04")
-    public AnimeInfo getAnimeInfo01(@RequestBody AnimeInfo animeInfo){
-        System.out.println("04 animeInfo >> "+animeInfo);
+    public AnimeInfo getAnimeInfo01(@RequestBody AnimeInfo animeInfo) {
+        System.out.println("04 animeInfo >> " + animeInfo);
         AnimeInfo animeInfo01 = new AnimeInfo();
         animeInfo01.setName("Alicization");
         animeInfo01.setTime(2022);
@@ -51,8 +51,8 @@ public class AnimeInfoController {
     }
 
     @GetMapping("/parameter05")
-    public List<AnimeInfo> getAnimeInfo02(@RequestBody List<AnimeInfo> animeInfoList){
-        System.out.println("05 animeInfoList >> "+animeInfoList);
+    public List<AnimeInfo> getAnimeInfo02(@RequestBody List<AnimeInfo> animeInfoList) {
+        System.out.println("05 animeInfoList >> " + animeInfoList);
         AnimeInfo animeInfo01 = new AnimeInfo();
         animeInfo01.setName("Alicization01");
         animeInfo01.setTime(2022);
@@ -70,22 +70,21 @@ public class AnimeInfoController {
     }
 
     @GetMapping("/parameter06")
-    public String[] getArray01(String [] animes){
-        System.out.println("animes >> "+ Arrays.toString(animes));
-        return new String []{"kirito","asuna","Alici","eugeo"};
+    public String[] getArray01(String[] animes) {
+        System.out.println("animes >> " + Arrays.toString(animes));
+        return new String[]{"kirito", "asuna", "Alici", "eugeo"};
     }
 
-
-
-
-
-
-
-
-
-
-
-
+    @GetMapping("/parameter07")
+    public List<String> getList01(List<String> animes) {
+        System.out.println("animes >> " + animes);
+        ArrayList<String> animeList = new ArrayList<>();
+        animeList.add("kirito");
+        animeList.add("asuna");
+        animeList.add("Alici");
+        animeList.add("eugeo");
+        return animeList;
+    }
 
 
 }

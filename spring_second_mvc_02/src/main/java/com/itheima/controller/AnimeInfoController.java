@@ -1,6 +1,7 @@
 package com.itheima.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,9 +20,16 @@ import java.time.format.DateTimeFormatter;
 public class AnimeInfoController {
 
     @GetMapping
-    public String getString(String name, Integer time) {
+    public String getString01(String name, Integer time) {
         System.out.println("name >> " + name + "|| time >> " + time);
-        return "getString...Lycoris recoil";
+        return "getString01...Lycoris recoil";
     }
+
+    @GetMapping
+    public String getString02(@PathVariable("anime") String name){
+        System.out.println("name >> "+name);
+        return "getString02..";
+    }
+
 
 }

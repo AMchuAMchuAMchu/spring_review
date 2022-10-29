@@ -1,5 +1,8 @@
 package com.itheima.controller;
 
+import com.alibaba.fastjson2.JSON;
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.itheima.pojo.AnimeInfo;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.format.DateTimeFormatter;
@@ -33,6 +36,19 @@ public class AnimeInfoController {
         System.out.println("name >> " + name + "|| time >> " + time);
         return "getString03...Lycoris recoil";
     }
+
+    @GetMapping("/parameter03")
+    public AnimeInfo getAnimeInfo01(@RequestBody AnimeInfo animeInfo){
+        System.out.println("03 animeInfo >> "+animeInfo);
+        AnimeInfo animeInfo01 = new AnimeInfo();
+        animeInfo01.setName("Alicization");
+        animeInfo01.setTime(2022);
+        return animeInfo01;
+    }
+
+
+
+
 
 
 

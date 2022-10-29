@@ -76,7 +76,7 @@ public class AnimeInfoController {
     }
 
     @GetMapping("/parameter07")
-    public List<String> getList01(List<String> animes) {
+    public List<String> getList01(@RequestBody List<String> animes) {
         System.out.println("animes >> " + animes);
         ArrayList<String> animeList = new ArrayList<>();
         animeList.add("kirito");

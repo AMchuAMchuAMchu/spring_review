@@ -37,7 +37,7 @@ public class AnimeInfoController {
         return "getString03...Lycoris recoil";
     }
 
-    @GetMapping("/parameter03")
+    @GetMapping("/parameter04")
     public AnimeInfo getAnimeInfo01(@RequestBody AnimeInfo animeInfo){
         System.out.println("03 animeInfo >> "+animeInfo);
         AnimeInfo animeInfo01 = new AnimeInfo();

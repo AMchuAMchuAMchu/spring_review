@@ -6,6 +6,8 @@ import com.itheima.pojo.AnimeInfo;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Description ==> TODO
@@ -39,12 +41,33 @@ public class AnimeInfoController {
 
     @GetMapping("/parameter04")
     public AnimeInfo getAnimeInfo01(@RequestBody AnimeInfo animeInfo){
-        System.out.println("03 animeInfo >> "+animeInfo);
+        System.out.println("04 animeInfo >> "+animeInfo);
         AnimeInfo animeInfo01 = new AnimeInfo();
         animeInfo01.setName("Alicization");
         animeInfo01.setTime(2022);
         return animeInfo01;
     }
+
+    @GetMapping("/parameter05")
+    public List<AnimeInfo> getAnimeInfo02(@RequestBody List<AnimeInfo> animeInfoList){
+        System.out.println("05 animeInfoList >> "+animeInfoList);
+        AnimeInfo animeInfo01 = new AnimeInfo();
+        animeInfo01.setName("Alicization01");
+        animeInfo01.setTime(2022);
+
+        AnimeInfo animeInfo02 = new AnimeInfo();
+        animeInfo02.setName("Alicization02");
+        animeInfo02.setTime(2023);
+
+        ArrayList<AnimeInfo> animeInfos = new ArrayList<>();
+
+        animeInfos.add(animeInfo01);
+        animeInfos.add(animeInfo02);
+
+        return animeInfos;
+    }
+
+
 
 
 

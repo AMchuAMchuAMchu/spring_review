@@ -88,4 +88,15 @@ public class AnimeInfoController {
     }
 
 
+    @GetMapping("/parameter08")
+    public String getJson01(AnimeInfo animeInfo) {
+        System.out.println("animes >> " + animeInfo);
+        AnimeInfo animeInfo1 = new AnimeInfo();
+        animeInfo1.setName("希尔");
+        animeInfo1.setTime(2015);
+        String s = JSON.toJSONString(animeInfo1);
+        return s;
+    }
+
+
 }

@@ -18,6 +18,7 @@
         <module>spring_second_transactional_01</module>
         <module>spring_second_mvc_01</module>
         <module>ssm_01</module>
+        <module>spring_second_mvc_02</module>
     </modules>
 
     <properties>

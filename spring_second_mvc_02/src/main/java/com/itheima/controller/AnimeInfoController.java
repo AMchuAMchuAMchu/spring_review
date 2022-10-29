@@ -9,6 +9,7 @@ import java.nio.file.AccessMode;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -97,6 +98,16 @@ public class AnimeInfoController {
         String s = JSON.toJSONString(animeInfo1);
         System.out.println("s >> "+s);
         return s+"刀剑神域";
+    }
+
+    @GetMapping("/date01")
+    public Date getDate01(Date date01){
+
+        System.out.println("date >> "+date01);
+
+        return new Date(20221029);
+
+
     }
 
 

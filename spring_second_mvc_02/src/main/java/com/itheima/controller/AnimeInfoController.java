@@ -19,13 +19,13 @@ import java.time.format.DateTimeFormatter;
 @RestController
 public class AnimeInfoController {
 
-    @GetMapping
+    @GetMapping("/parameter01")
     public String getString01(String name, Integer time) {
         System.out.println("name >> " + name + "|| time >> " + time);
         return "getString01...Lycoris recoil";
     }
 
-    @GetMapping
+    @GetMapping("/parameter02")
     public String getString02(@PathVariable("anime") String name){
         System.out.println("name >> "+name);
         return "getString02..";

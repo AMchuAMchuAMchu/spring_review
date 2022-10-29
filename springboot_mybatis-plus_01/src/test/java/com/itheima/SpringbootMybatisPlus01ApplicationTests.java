@@ -11,8 +11,6 @@ import java.util.List;
 @SpringBootTest
 class SpringbootMybatisPlus01ApplicationTests {
 
-
-
     @Autowired
     private AnimeInfoDao animeInfoDao;
 

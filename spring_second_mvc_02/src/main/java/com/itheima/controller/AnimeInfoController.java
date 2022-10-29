@@ -19,12 +19,9 @@ import java.time.format.DateTimeFormatter;
 public class AnimeInfoController {
 
     @GetMapping
-    public String getString(String name,Integer time){
-        System.out.println("name >> "+name+"|| time >> "+time);
+    public String getString(String name, Integer time) {
+        System.out.println("name >> " + name + "|| time >> " + time);
         return "getString...Lycoris recoil";
     }
-
-
-
 
 }

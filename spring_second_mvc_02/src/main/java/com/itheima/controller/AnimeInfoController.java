@@ -3,6 +3,7 @@ package com.itheima.controller;
 import com.alibaba.fastjson2.JSON;
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.itheima.pojo.AnimeInfo;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
 import java.nio.file.AccessMode;
@@ -101,7 +102,7 @@ public class AnimeInfoController {
     }
 
     @GetMapping("/date01")
-    public Date getDate01(Date date01){
+    public Date getDate01(@DateTimeFormat(pattern = "yyyy-MM-dd") Date date01){
 
         System.out.println("date >> "+date01);
 

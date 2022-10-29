@@ -67,6 +67,13 @@ public class AnimeInfoController {
         return animeInfos;
     }
 
+    @GetMapping("/parameter06")
+    public String[] getArray01(String [] animes){
+        System.out.println("animes >> "+animes);
+        return new String []{"kirito","asuna","Alici","eugeo"};
+    }
+
+
 
 
 

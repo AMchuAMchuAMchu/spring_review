@@ -101,7 +101,7 @@ public class AnimeInfoController {
     }
 
     @GetMapping("/date01")
-    public Date getDate01(Date date01){
+    public Date getDate01(@RequestParam("date01") Date date01){
 
         System.out.println("date >> "+date01);
 

@@ -96,7 +96,7 @@ public class AnimeInfoController {
         animeInfo1.setTime(2015);
         String s = JSON.toJSONString(animeInfo1);
         System.out.println("s >> "+s);
-        return s;
+        return s+"刀剑神域";
     }
 
 

@@ -29,7 +29,7 @@ public class AnimeInfoController {
     }
 
     @GetMapping("/parameter03")
-    public String getString03( String name, Integer time) {
+    public String getString03(@RequestParam("anime") String name, Integer time) {
         System.out.println("name >> " + name + "|| time >> " + time);
         return "getString03...Lycoris recoil";
     }

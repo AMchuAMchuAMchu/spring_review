@@ -6,6 +6,7 @@ import com.itheima.service.AnimeInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,8 +27,8 @@ public class AnimeInfoController {
     @Autowired
     private AnimeInfoService animeInfoService;
 
-    @GetMapping
-    public AnimeResult getAnimeInfo(Integer id) {
+    @GetMapping("/{id}")
+    public AnimeResult getAnimeInfo(@PathVariable("id") Integer id) {
         if (id == 1) {
             throw new BusinessExceptionTest("请输入正确格式的说...",null,400);
         }
@@ -35,7 +36,7 @@ public class AnimeInfoController {
         try {
             int i = 10 / 0;
         } catch (Exception e) {
-            throw new SystemExceptionTest("果咩~~服务器内部故障...",null,500);
+            throw new SystemExceptionTest("果咩~~服务器内部故障...",null,500 );
         }
         System.out.println("controller...call...");
         Gson gson = new Gson();

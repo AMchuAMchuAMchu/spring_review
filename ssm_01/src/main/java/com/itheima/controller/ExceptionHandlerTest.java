@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class ExceptionHandlerTest {
 
-    @ExceptionHandler
+    @ExceptionHandler(Exception.class)
     public AnimeResult handleEX(){
         return new AnimeResult(null,500,"果咩~~无法获取数据...");
     }

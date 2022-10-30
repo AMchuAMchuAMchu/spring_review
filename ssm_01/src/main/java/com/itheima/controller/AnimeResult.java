@@ -22,4 +22,12 @@ public class AnimeResult {
 
     private String msg;
 
+    public AnimeResult(List<AnimeInfo> animeInfoList, Integer code, String msg) {
+        this.animeInfoList = animeInfoList;
+        this.code = code;
+        this.msg = msg;
+    }
+
+    public AnimeResult() {
+    }
 }

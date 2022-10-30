@@ -22,4 +22,8 @@ public class AnimeInfo {
     private String character02;
 
     private Integer id;
+
+
+    public AnimeInfo() {
+    }
 }

@@ -29,7 +29,7 @@ public class AnimeInfoController {
     @GetMapping
     public AnimeResult getAnimeInfo(){
         List<AnimeInfo> animeInfos = animeInfoService.selectALl();
-        int i = 10/0;
+//        int i = 10/0;
         System.out.println("controller...call...");
         Gson gson = new Gson();
         String s = gson.toJson(animeInfos);

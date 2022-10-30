@@ -20,8 +20,8 @@ public class RestTestController {
         return "PostMapping";
     }
 
-    @DeleteMapping("/{id}")
-    public String deleteString(@PathVariable("id") Integer id){
+    @DeleteMapping("/{id}/{name}")
+    public String deleteString(@PathVariable("id") Integer id,@PathVariable("name") String name){
         System.out.println("DeleteMapping..."+id);
         return "DeleteMapping";
     }

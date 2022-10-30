@@ -19,4 +19,16 @@ public class ExceptionHandlerTest {
         return new AnimeResult(null,500,"果咩~~无法获取数据...");
     }
 
+
+    @ExceptionHandler(BusinessExceptionTest.class)
+    public AnimeResult handleBx(BusinessExceptionTest bx){
+        return new AnimeResult(null,bx.getCode(),bx.getMessage());
+    }
+
+    @ExceptionHandler(SystemExceptionTest.class)
+    public AnimeResult handleSx(SystemExceptionTest sx){
+        return new AnimeResult(null,sx.getCode(),sx.getMessage());
+    }
+
+
 }

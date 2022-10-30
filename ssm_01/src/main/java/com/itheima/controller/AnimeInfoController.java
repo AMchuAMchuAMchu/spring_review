@@ -27,16 +27,23 @@ public class AnimeInfoController {
     private AnimeInfoService animeInfoService;
 
     @GetMapping
-    public AnimeResult getAnimeInfo(){
+    public AnimeResult getAnimeInfo(Integer id) {
+        if (id == 1) {
+            throw new BusinessExceptionTest("请输入正确格式的说...",null,400);
+        }
         List<AnimeInfo> animeInfos = animeInfoService.selectALl();
-        int i = 10/0;
+        try {
+            int i = 10 / 0;
+        } catch (Exception e) {
+            throw new SystemExceptionTest("果咩~~服务器内部故障...",null,500);
+        }
         System.out.println("controller...call...");
         Gson gson = new Gson();
         String s = gson.toJson(animeInfos);
         AnimeResult animeResult = new AnimeResult();
         animeResult.setAnimeInfoList(animeInfos);
-        animeResult.setCode(animeInfos!=null?200:500);
-        animeResult.setMsg(animeInfos!=null?"哦咩爹多!!收到数据!!":"找不到数据...果咩~~");
+        animeResult.setCode(animeInfos != null ? 200 : 500);
+        animeResult.setMsg(animeInfos != null ? "哦咩爹多!!收到数据!!" : "找不到数据...果咩~~");
         return animeResult;
     }
 

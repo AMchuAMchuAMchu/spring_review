@@ -27,12 +27,16 @@ public class AnimeInfoController {
     private AnimeInfoService animeInfoService;
 
     @GetMapping
-    public String getAnimeInfo(){
+    public AnimeResult getAnimeInfo(){
         List<AnimeInfo> animeInfos = animeInfoService.selectALl();
         System.out.println("controller...call...");
         Gson gson = new Gson();
         String s = gson.toJson(animeInfos);
-        return s;
+        AnimeResult animeResult = new AnimeResult();
+        animeResult.setAnimeInfoList(animeInfos);
+        animeResult.setCode(animeInfos!=null?200:500);
+        animeResult.setMsg(animeInfos!=null?"哦咩爹多!!收到数据!!":"找不到数据...果咩~~");
+        return animeResult;
     }
 
 

@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import javax.crypto.ExemptionMechanismException;
 import java.util.List;
 import java.util.Map;
 
@@ -19,6 +20,17 @@ class SpringThirdMybatisPlusApplicationTests {
 
     @Autowired
     private AnimeInfoDao animeInfoDao;
+
+    @Test
+    void testSelectAll(){
+
+        List<AnimeInfo> animeInfos = animeInfoDao.selectList(null);
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        animeInfos.forEach(System.out::println);
+
+    }
 
 
     @Test

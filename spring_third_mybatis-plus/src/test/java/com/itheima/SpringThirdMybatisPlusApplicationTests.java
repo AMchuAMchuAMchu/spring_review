@@ -18,11 +18,13 @@ class SpringThirdMybatisPlusApplicationTests {
     @Test
     void contextLoads() {
 
-        List<AnimeInfo> animeInfos = animeInfoDao.selectList(null);
+//        List<AnimeInfo> animeInfos = animeInfoDao.selectList(null);
+        AnimeInfo animeInfo = animeInfoDao.selectById(1);
         System.out.println();
         System.out.println();
         System.out.println();
-        animeInfos.forEach(System.out::println);
+//        animeInfos.forEach(System.out::println);
+        System.out.println(animeInfo);
 
     }
 

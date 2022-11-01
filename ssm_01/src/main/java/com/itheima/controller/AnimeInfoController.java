@@ -30,15 +30,15 @@ public class AnimeInfoController {
 //    @GetMapping("/{id}")
     @GetMapping
     public AnimeResult getAnimeInfo(@PathVariable("id") Integer id) {
-        if (id == 1) {
-            throw new BusinessExceptionTest("请输入正确格式的说...",null,400);
-        }
-        List<AnimeInfo> animeInfos = animeInfoService.selectALl();
-        try {
-            int i = 10 / 0;
-        } catch (Exception e) {
-            throw new SystemExceptionTest("果咩~~服务器内部故障...",null,500 );
-        }
+//        if (id == 1) {
+//            throw new BusinessExceptionTest("请输入正确格式的说...",null,400);
+//        }
+//        List<AnimeInfo> animeInfos = animeInfoService.selectALl();
+//        try {
+//            int i = 10 / 0;
+//        } catch (Exception e) {
+//            throw new SystemExceptionTest("果咩~~服务器内部故障...",null,500 );
+//        }
         System.out.println("controller...call...");
         Gson gson = new Gson();
         String s = gson.toJson(animeInfos);

@@ -16,6 +16,16 @@ class SpringThirdMybatisPlusApplicationTests {
     private AnimeInfoDao animeInfoDao;
 
     @Test
+    void testDeleteById(){
+        AnimeInfo animeInfo = new AnimeInfo();
+        animeInfo.setId(37);
+        int i = animeInfoDao.deleteById(animeInfo);
+
+        System.out.println(i>0);
+
+    }
+
+    @Test
     void contextLoads() {
 
 //        List<AnimeInfo> animeInfos = animeInfoDao.selectList(null);

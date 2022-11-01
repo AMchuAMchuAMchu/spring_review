@@ -33,7 +33,7 @@ public class AnimeInfoController {
 //        if (id == 1) {
 //            throw new BusinessExceptionTest("请输入正确格式的说...",null,400);
 //        }
-//        List<AnimeInfo> animeInfos = animeInfoService.selectALl();
+        List<AnimeInfo> animeInfos = animeInfoService.selectALl();
 //        try {
 //            int i = 10 / 0;
 //        } catch (Exception e) {

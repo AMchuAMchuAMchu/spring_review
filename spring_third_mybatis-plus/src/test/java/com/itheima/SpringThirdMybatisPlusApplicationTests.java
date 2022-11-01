@@ -24,7 +24,9 @@ class SpringThirdMybatisPlusApplicationTests {
 
         LambdaQueryWrapper<AnimeInfo> lqw = new LambdaQueryWrapper<>();
 
-        lqw.like(AnimeInfo::getName,"SAO");
+//        lqw.like(AnimeInfo::getName,"SAO");
+
+        lqw.between(AnimeInfo::getReleaseTime,2011,2012);
 
         List<AnimeInfo> animeInfos = animeInfoDao.selectList(lqw);
         System.out.println();

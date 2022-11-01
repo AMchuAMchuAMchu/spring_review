@@ -27,7 +27,8 @@ public class AnimeInfoController {
     @Autowired
     private AnimeInfoService animeInfoService;
 
-    @GetMapping("/{id}")
+//    @GetMapping("/{id}")
+    @GetMapping
     public AnimeResult getAnimeInfo(@PathVariable("id") Integer id) {
         if (id == 1) {
             throw new BusinessExceptionTest("请输入正确格式的说...",null,400);

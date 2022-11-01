@@ -26,7 +26,9 @@ class SpringThirdMybatisPlusApplicationTests {
 
         QueryWrapper<AnimeInfo> qw = new QueryWrapper<>();
 
-        qw.select("count(*)");
+//        qw.select("count(*)");
+
+        qw.select("sum(ReleaseTime)");
 
         List<Map<String, Object>> maps = animeInfoDao.selectMaps(qw);
 

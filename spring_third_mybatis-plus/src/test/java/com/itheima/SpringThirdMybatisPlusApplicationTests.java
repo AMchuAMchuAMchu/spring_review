@@ -36,11 +36,8 @@ class SpringThirdMybatisPlusApplicationTests {
 //        qw.select("min(release_time)");
 //        qw.select("AVG(release_time)");
 
-        AnimeInfo animeInfo = new AnimeInfo();
 
-        Integer releaseTime = animeInfo.getReleaseTime();
-
-        qw.groupBy(releaseTime.toString());
+        qw.groupBy("release_time");
 
         List<Map<String, Object>> maps = animeInfoDao.selectMaps(qw);
 

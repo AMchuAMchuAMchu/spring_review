@@ -1,6 +1,7 @@
 package com.itheima;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.itheima.dao.AnimeInfoDao;
 import com.itheima.pojo.AnimeInfo;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
+import java.util.Map;
 
 @SpringBootTest
 class SpringThirdMybatisPlusApplicationTests {
@@ -17,6 +19,24 @@ class SpringThirdMybatisPlusApplicationTests {
 
     @Autowired
     private AnimeInfoDao animeInfoDao;
+
+
+    @Test
+    void testGroupAndAggregate(){
+
+        QueryWrapper<AnimeInfo> qw = new QueryWrapper<>();
+
+        qw.select("count(*)");
+
+        List<Map<String, Object>> maps = animeInfoDao.selectMaps(qw);
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        maps.forEach(System.out::println);
+
+
+    }
 
 
     @Test
@@ -30,7 +50,7 @@ class SpringThirdMybatisPlusApplicationTests {
 
 //        lqw.orderBy(true,true,AnimeInfo::getReleaseTime);
 
-        lqw.select(AnimeInfo::getName,AnimeInfo::getReleaseTime);
+//        lqw.select(AnimeInfo::getName,AnimeInfo::getReleaseTime);
 
         List<AnimeInfo> animeInfos = animeInfoDao.selectList(lqw);
         System.out.println();

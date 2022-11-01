@@ -122,7 +122,7 @@ class SpringThirdMybatisPlusApplicationTests {
     @Test
     void testUpdate(){
         AnimeInfo animeInfo = new AnimeInfo();
-        animeInfo.setName("在地下城寻求邂逅是否搞错了什么...");
+        animeInfo.setName01("在地下城寻求邂逅是否搞错了什么...");
         animeInfo.setReleaseTime(2015);
         animeInfo.setCharacter02("赫斯提亚-水濑祈");
         animeInfo.setCharacter01("贝尔克朗尼-松冈祯丞");

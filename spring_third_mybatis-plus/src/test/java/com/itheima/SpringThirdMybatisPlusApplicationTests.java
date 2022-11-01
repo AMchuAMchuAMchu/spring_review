@@ -28,8 +28,9 @@ class SpringThirdMybatisPlusApplicationTests {
 
 //        lqw.between(AnimeInfo::getReleaseTime,2011,2012);
 
-        lqw.orderBy(true,true,AnimeInfo::getReleaseTime);
+//        lqw.orderBy(true,true,AnimeInfo::getReleaseTime);
 
+        lqw.select(AnimeInfo::getName,AnimeInfo::getReleaseTime);
 
         List<AnimeInfo> animeInfos = animeInfoDao.selectList(lqw);
         System.out.println();

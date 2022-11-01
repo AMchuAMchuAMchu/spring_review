@@ -28,7 +28,7 @@ class SpringThirdMybatisPlusApplicationTests {
 
 //        qw.select("count(*)");
 
-        qw.select("sum(releaseTime)");
+        qw.select("sum(release_time)");
 
         List<Map<String, Object>> maps = animeInfoDao.selectMaps(qw);
 

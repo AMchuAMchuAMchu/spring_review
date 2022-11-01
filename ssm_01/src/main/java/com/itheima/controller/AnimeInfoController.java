@@ -29,7 +29,8 @@ public class AnimeInfoController {
 
 //    @GetMapping("/{id}")
     @GetMapping
-    public AnimeResult getAnimeInfo(@PathVariable("id") Integer id) {
+//    public AnimeResult getAnimeInfo(@PathVariable("id") Integer id) {
+    public AnimeResult getAnimeInfo() {
 //        if (id == 1) {
 //            throw new BusinessExceptionTest("请输入正确格式的说...",null,400);
 //        }

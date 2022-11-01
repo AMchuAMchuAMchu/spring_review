@@ -1,8 +1,10 @@
 package com.itheima;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.itheima.dao.AnimeInfoDao;
 import com.itheima.pojo.AnimeInfo;
+import org.apache.logging.log4j.util.Strings;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,6 +17,26 @@ class SpringThirdMybatisPlusApplicationTests {
 
     @Autowired
     private AnimeInfoDao animeInfoDao;
+
+
+
+    @Test
+    void testEqLtGt(){
+
+        LambdaQueryWrapper<AnimeInfo> lqw = new LambdaQueryWrapper<>();
+
+        String time = "releaseTime";
+
+        LambdaQueryWrapper<AnimeInfo> eq = lqw.eq(Strings.isEmpty(time), AnimeInfo::getReleaseTime, 2015);
+
+        List<AnimeInfo> animeInfos = animeInfoDao.selectList(eq);
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        animeInfos.forEach(System.out::println);
+
+
+    }
 
     @Test
     void testPage01(){

@@ -26,6 +26,7 @@ class SpringThirdMybatisPlusApplicationTests {
 
         QueryWrapper<AnimeInfo> qw = new QueryWrapper<>();
 
+
 //        qw.select("count(*)");
 
 //        qw.select("sum(release_time)");
@@ -33,7 +34,13 @@ class SpringThirdMybatisPlusApplicationTests {
 //        qw.select("max(release_time)");
 
 //        qw.select("min(release_time)");
-        qw.select("AVG(release_time)");
+//        qw.select("AVG(release_time)");
+
+        AnimeInfo animeInfo = new AnimeInfo();
+
+        Integer releaseTime = animeInfo.getReleaseTime();
+
+        qw.groupBy(releaseTime.toString());
 
         List<Map<String, Object>> maps = animeInfoDao.selectMaps(qw);
 

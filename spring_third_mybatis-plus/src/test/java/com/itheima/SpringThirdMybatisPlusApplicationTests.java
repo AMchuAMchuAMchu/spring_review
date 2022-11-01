@@ -27,7 +27,7 @@ class SpringThirdMybatisPlusApplicationTests {
 
         String time = "releaseTime";
 
-        LambdaQueryWrapper<AnimeInfo> eq = lqw.eq(Strings.isEmpty(time), AnimeInfo::getReleaseTime, 2015);
+        LambdaQueryWrapper<AnimeInfo> eq = lqw.eq(AnimeInfo::getReleaseTime, 2015);
 
         List<AnimeInfo> animeInfos = animeInfoDao.selectList(eq);
         System.out.println();

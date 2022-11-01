@@ -1,5 +1,6 @@
 package com.itheima.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 
 /**
@@ -13,6 +14,7 @@ import lombok.Data;
 @Data
 public class AnimeInfo {
 
+    @TableField("name")
     private String name01;
 
     private Integer releaseTime;

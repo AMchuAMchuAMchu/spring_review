@@ -19,6 +19,20 @@ class SpringThirdMybatisPlusApplicationTests {
     private AnimeInfoDao animeInfoDao;
 
 
+    @Test
+    void testLike(){
+
+        LambdaQueryWrapper<AnimeInfo> lqw = new LambdaQueryWrapper<>();
+
+        lqw.like(AnimeInfo::getName,"SAO");
+
+        List<AnimeInfo> animeInfos = animeInfoDao.selectList(lqw);
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        animeInfos.forEach(System.out::println);
+
+    }
 
     @Test
     void testEqLtGt(){

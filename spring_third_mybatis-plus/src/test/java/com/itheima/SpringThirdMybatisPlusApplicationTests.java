@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.itheima.dao.AnimeInfoDao;
-import com.itheima.pojo.AnimeInfo;
+import com.itheima.pojo.AnimeInfo01;
 import org.apache.logging.log4j.util.Strings;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,16 +19,16 @@ class SpringThirdMybatisPlusApplicationTests {
 
 
     @Autowired
-    private AnimeInfoDao animeInfoDao;
+    private AnimeInfoDao animeInfo01Dao;
 
     @Test
     void testSelectAll(){
 
-        List<AnimeInfo> animeInfos = animeInfoDao.selectList(null);
+        List<AnimeInfo01> animeInfo01s = animeInfo01Dao.selectList(null);
         System.out.println();
         System.out.println();
         System.out.println();
-        animeInfos.forEach(System.out::println);
+        animeInfo01s.forEach(System.out::println);
 
     }
 
@@ -36,7 +36,7 @@ class SpringThirdMybatisPlusApplicationTests {
     @Test
     void testGroupAndAggregate(){
 
-        QueryWrapper<AnimeInfo> qw = new QueryWrapper<>();
+        QueryWrapper<AnimeInfo01> qw = new QueryWrapper<>();
 
 
 //        qw.select("count(*)");
@@ -51,7 +51,7 @@ class SpringThirdMybatisPlusApplicationTests {
 
         qw.groupBy("release_time");
 
-        List<Map<String, Object>> maps = animeInfoDao.selectMaps(qw);
+        List<Map<String, Object>> maps = animeInfo01Dao.selectMaps(qw);
 
         System.out.println();
         System.out.println();
@@ -65,41 +65,41 @@ class SpringThirdMybatisPlusApplicationTests {
     @Test
     void testLike(){
 
-        LambdaQueryWrapper<AnimeInfo> lqw = new LambdaQueryWrapper<>();
+        LambdaQueryWrapper<AnimeInfo01> lqw = new LambdaQueryWrapper<>();
 
-//        lqw.like(AnimeInfo::getName,"SAO");
+//        lqw.like(AnimeInfo01::getName,"SAO");
 
-//        lqw.between(AnimeInfo::getReleaseTime,2011,2012);
+//        lqw.between(AnimeInfo01::getReleaseTime,2011,2012);
 
-//        lqw.orderBy(true,true,AnimeInfo::getReleaseTime);
+//        lqw.orderBy(true,true,AnimeInfo01::getReleaseTime);
 
-//        lqw.select(AnimeInfo::getName,AnimeInfo::getReleaseTime);
+//        lqw.select(AnimeInfo01::getName,AnimeInfo01::getReleaseTime);
 
-        List<AnimeInfo> animeInfos = animeInfoDao.selectList(lqw);
+        List<AnimeInfo01> animeInfo01s = animeInfo01Dao.selectList(lqw);
         System.out.println();
         System.out.println();
         System.out.println();
-        animeInfos.forEach(System.out::println);
+        animeInfo01s.forEach(System.out::println);
 
     }
 
     @Test
     void testEqLtGt(){
 
-        LambdaQueryWrapper<AnimeInfo> lqw = new LambdaQueryWrapper<>();
+        LambdaQueryWrapper<AnimeInfo01> lqw = new LambdaQueryWrapper<>();
 
         String time = "releaseTime";
 
-//        LambdaQueryWrapper<AnimeInfo> eq = lqw.eq(AnimeInfo::getReleaseTime, 2015);
-//        LambdaQueryWrapper<AnimeInfo> eq = lqw.le(AnimeInfo::getReleaseTime, 2015);
-//        LambdaQueryWrapper<AnimeInfo> eq = lqw.ge(AnimeInfo::getReleaseTime, 2015);
-        LambdaQueryWrapper<AnimeInfo> eq = lqw.ge(AnimeInfo::getReleaseTime, 2030);
+//        LambdaQueryWrapper<AnimeInfo01> eq = lqw.eq(AnimeInfo01::getReleaseTime, 2015);
+//        LambdaQueryWrapper<AnimeInfo01> eq = lqw.le(AnimeInfo01::getReleaseTime, 2015);
+//        LambdaQueryWrapper<AnimeInfo01> eq = lqw.ge(AnimeInfo01::getReleaseTime, 2015);
+        LambdaQueryWrapper<AnimeInfo01> eq = lqw.ge(AnimeInfo01::getReleaseTime, 2030);
 
-        List<AnimeInfo> animeInfos = animeInfoDao.selectList(eq);
+        List<AnimeInfo01> animeInfo01s = animeInfo01Dao.selectList(eq);
         System.out.println();
         System.out.println();
         System.out.println();
-        animeInfos.forEach(System.out::println);
+        animeInfo01s.forEach(System.out::println);
 
 
     }
@@ -107,13 +107,13 @@ class SpringThirdMybatisPlusApplicationTests {
     @Test
     void testPage01(){
 
-        Page<AnimeInfo> animeInfoPage = new Page<>(1,3);
+        Page<AnimeInfo01> animeInfo01Page = new Page<>(1,3);
 
-        Page<AnimeInfo> animeInfoPage1 = animeInfoDao.selectPage(animeInfoPage, null);
+        Page<AnimeInfo01> animeInfo01Page1 = animeInfo01Dao.selectPage(animeInfo01Page, null);
         System.out.println();
         System.out.println();
         System.out.println();
-        animeInfoPage1.getRecords().forEach(System.out::println);
+        animeInfo01Page1.getRecords().forEach(System.out::println);
 
 
     }
@@ -121,14 +121,14 @@ class SpringThirdMybatisPlusApplicationTests {
 
     @Test
     void testUpdate(){
-        AnimeInfo animeInfo = new AnimeInfo();
-        animeInfo.setName01("在地下城寻求邂逅是否搞错了什么...");
-        animeInfo.setReleaseTime(2015);
-        animeInfo.setCharacter02("赫斯提亚-水濑祈");
-        animeInfo.setCharacter01("贝尔克朗尼-松冈祯丞");
-        animeInfo.setId(39);
+        AnimeInfo01 animeInfo01 = new AnimeInfo01();
+        animeInfo01.setName01("在地下城寻求邂逅是否搞错了什么...");
+        animeInfo01.setReleaseTime(2015);
+        animeInfo01.setCharacter02("赫斯提亚-水濑祈");
+        animeInfo01.setCharacter01("贝尔克朗尼-松冈祯丞");
+        animeInfo01.setId(39);
 
-        int i = animeInfoDao.updateById(animeInfo);
+        int i = animeInfo01Dao.updateById(animeInfo01);
 
         System.out.println(i>0);
 
@@ -136,9 +136,9 @@ class SpringThirdMybatisPlusApplicationTests {
 
     @Test
     void testDeleteById(){
-        AnimeInfo animeInfo = new AnimeInfo();
-        animeInfo.setId(37);
-        int i = animeInfoDao.deleteById(animeInfo);
+        AnimeInfo01 animeInfo01 = new AnimeInfo01();
+        animeInfo01.setId(37);
+        int i = animeInfo01Dao.deleteById(animeInfo01);
 
         System.out.println(i>0);
 
@@ -147,21 +147,21 @@ class SpringThirdMybatisPlusApplicationTests {
     @Test
     void contextLoads() {
 
-//        List<AnimeInfo> animeInfos = animeInfoDao.selectList(null);
-//        AnimeInfo animeInfo = animeInfoDao.selectById(1);
-        AnimeInfo animeInfo = new AnimeInfo();
-        animeInfo.setName01("在地下城寻求邂逅是否搞错了什么...");
-        animeInfo.setReleaseTime(2015);
-        animeInfo.setCharacter02("赫斯提亚");
-        animeInfo.setCharacter01("贝尔克朗尼");
-        animeInfo.setId(39);
+//        List<AnimeInfo01> animeInfo01s = animeInfo01Dao.selectList(null);
+//        AnimeInfo01 animeInfo01 = animeInfo01Dao.selectById(1);
+        AnimeInfo01 animeInfo01 = new AnimeInfo01();
+        animeInfo01.setName01("在地下城寻求邂逅是否搞错了什么...");
+        animeInfo01.setReleaseTime(2015);
+        animeInfo01.setCharacter02("赫斯提亚");
+        animeInfo01.setCharacter01("贝尔克朗尼");
+        animeInfo01.setId(39);
 
-        int insert = animeInfoDao.insert(animeInfo);
+        int insert = animeInfo01Dao.insert(animeInfo01);
         System.out.println();
         System.out.println();
         System.out.println();
-//        animeInfos.forEach(System.out::println);
-//        System.out.println(animeInfo);
+//        animeInfo01s.forEach(System.out::println);
+//        System.out.println(animeInfo01);
         System.out.println(insert>0);
 
 

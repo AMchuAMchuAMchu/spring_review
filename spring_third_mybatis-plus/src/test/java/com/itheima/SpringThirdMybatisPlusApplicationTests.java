@@ -11,6 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.crypto.ExemptionMechanismException;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -20,6 +23,24 @@ class SpringThirdMybatisPlusApplicationTests {
 
     @Autowired
     private AnimeInfoDao animeInfo01Dao;
+
+
+
+    @Test
+    void testBatch(){
+
+
+        List<Integer> ids = new ArrayList<Integer>();
+        ids.add(1);
+        ids.add(2);
+        ids.add(3);
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        animeInfo01Dao.selectBatchIds(ids);
+
+
+    }
 
     @Test
     void testSelectAll(){

@@ -1,8 +1,12 @@
 package com.itheima.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+
+import java.lang.reflect.Type;
 
 /**
  * Description ==> TODO
@@ -26,6 +30,7 @@ public class AnimeInfo01 {
 
     private String character02;
 
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     @TableField(exist = false)

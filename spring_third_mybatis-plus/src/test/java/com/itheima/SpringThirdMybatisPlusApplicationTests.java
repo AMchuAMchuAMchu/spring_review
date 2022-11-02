@@ -26,6 +26,19 @@ class SpringThirdMybatisPlusApplicationTests {
 
 
 
+    @Test
+    void testDeleteLogic(){
+
+        int i = animeInfo01Dao.deleteById(1);
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println(i>0);
+        System.out.println(i>0);
+        System.out.println(i>0);
+
+    }
+
 
     @Test
     void testBatchDelete(){

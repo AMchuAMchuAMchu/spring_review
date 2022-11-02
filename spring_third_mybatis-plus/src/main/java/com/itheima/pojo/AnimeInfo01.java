@@ -27,5 +27,7 @@ public class AnimeInfo01 {
 
     private Integer id;
 
+    private String haha;
+
 
 }

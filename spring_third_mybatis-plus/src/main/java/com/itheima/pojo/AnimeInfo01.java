@@ -27,6 +27,7 @@ public class AnimeInfo01 {
 
     private Integer id;
 
+    @TableField(exist = false)
     private String haha;
 
 

@@ -37,7 +37,9 @@ class SpringThirdMybatisPlusApplicationTests {
         System.out.println();
         System.out.println();
         System.out.println();
-        animeInfo01Dao.selectBatchIds(ids);
+        List<AnimeInfo01> animeInfo01s = animeInfo01Dao.selectBatchIds(ids);
+
+        animeInfo01s.forEach(System.out::println);
 
 
     }

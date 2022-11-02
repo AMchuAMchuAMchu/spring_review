@@ -26,6 +26,24 @@ class SpringThirdMybatisPlusApplicationTests {
 
 
 
+
+    @Test
+    void testBatchDelete(){
+
+        List<Integer> list = new ArrayList<>();
+        list.add(35);
+        list.add(36);
+        list.add(38);
+
+        int i = animeInfo01Dao.deleteBatchIds(list);
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println(i>0);
+        System.out.println(i>0);
+        System.out.println(i>0);
+    }
+
     @Test
     void testBatch(){
 

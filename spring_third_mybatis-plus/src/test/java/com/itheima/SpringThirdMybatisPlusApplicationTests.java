@@ -27,6 +27,24 @@ class SpringThirdMybatisPlusApplicationTests {
 
 
     @Test
+    void testVersion(){
+
+        AnimeInfo01 animeInfo01 = new AnimeInfo01();
+        animeInfo01.setName01("地下城");
+        animeInfo01.setId(39);
+        int i = animeInfo01Dao.updateById(animeInfo01);
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println(i>0);
+        System.out.println(i>0);
+        System.out.println(i>0);
+
+    }
+
+
+
+    @Test
     void testDeleteLogic(){
 
         int i = animeInfo01Dao.deleteById(1);

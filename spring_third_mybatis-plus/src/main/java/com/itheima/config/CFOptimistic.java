@@ -18,7 +18,7 @@ public class CFOptimistic {
 
 
     @Bean
-    public MybatisPlusInterceptor getMPI(){
+    public MybatisPlusInterceptor getOptimis(){
         MybatisPlusInterceptor mpi = new MybatisPlusInterceptor();
 
         mpi.addInnerInterceptor(new OptimisticLockerInnerInterceptor());

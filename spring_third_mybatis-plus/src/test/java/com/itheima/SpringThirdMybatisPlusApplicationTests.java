@@ -30,8 +30,9 @@ class SpringThirdMybatisPlusApplicationTests {
     void testVersion(){
 
         AnimeInfo01 animeInfo01 = new AnimeInfo01();
-        animeInfo01.setName01("地下城");
+        animeInfo01.setName01("地下城克朗尼");
         animeInfo01.setId(39);
+        animeInfo01.setVersion(1);
         int i = animeInfo01Dao.updateById(animeInfo01);
         System.out.println();
         System.out.println();

@@ -37,4 +37,8 @@ public class AnimeInfo01 {
     private Integer deleteId;
 
 
+    @Version
+    private Integer version;
+
+
 }
